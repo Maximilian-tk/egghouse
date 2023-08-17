@@ -6,53 +6,60 @@
   <script src="navigation.js"></script>
   <script src="imageDisplay.js"></script>
 </head>
+
 <body>
   <div class="main-container">
+
     <div class="left-container">
       <div class="left-banner">Egghouse</div>
       <div class="buttons">
         <!-- Left container buttons -->
         <button class="left-button" onclick="showTab(event, 'WelcomeTab')" id="defaultTab" data-views="welcome">Welcome</button>
+        <button class="left-button" onclick="showTab(event, 'ModelTab')" data-views="view1floors view2floors view3floors view4floors" data-background="#FF5733">Model</button>   
         <button class="left-button" onclick="showTab(event, 'FloorsTab')" data-views="view1floors view2floors view3floors view4floors" data-background="#FF5733">Floors</button>
         <button class="left-button" onclick="showTab(event, 'AnalysesTab')" data-views="view1analysis view2analysis view3analysis view4analysis" data-background="#33FF57">Analyses</button>
         <button class="left-button" onclick="showTab(event, 'SchedulesTab')" data-views="view1schedules view2schedules view3schedules view4schedules" data-background="#5733FF">Schedules</button>
       </div>
     </div>
+
     <div class="right-container">
+    
       <!-- Welcome tab -->
       <div id="WelcomeTab" class="tabcontent">
+        <img src="images/p1 Welcome Cover.jpg" class="coverimage"/>
+      </div>
+
+      <!-- Model tab -->
+      <div id="ModelTab" class="tabcontent">
         <iframe id="sdv-iframe" width="100%" height="100%" src="https://www.shapediver.com/app/iframe/egg-structure-6-reduced-5?primaryColor=%23317DD4&secondaryColor=%23393A45&surfaceColor=%23FFFFFF&backgroundColor=%23F8F8F8&showControls=1&showZoomButton=1&showFullscreenButton=1&logo=" referrerpolicy="origin" allowfullscreen style="overflow-x: hidden; overflow-y: hidden; border-width: 0;">
           <p>Your browser does not support iframes.</p>
         </iframe>
-        <div class="nav-buttons">
-          <div class="nav-buttons-welcome"></div>
-            <button class="nav-button" data-view="view1welcome">View 1 Welcome</button>
-            <button class="nav-button" data-view="view2welcome">View 2 Welcome</button>
-          <div class="nav-buttons-welcome"></div>
-        </div>
       </div>
 
       <!-- Floors tab -->
       <div id="FloorsTab" class="tabcontent">
-        Some text lol
+        <!-- Some text lol -->
+        <img src="images/p8 Floor 1.jpg" class="image" id="FloorsImage" />
+        <!-- <div class="banner">Floors</div> -->
         <div class="nav-buttons">
           <div class="nav-buttons-floors"></div>
-            <button class="nav-button" data-view="view1floors">View 1 Floors</button>
-            <button class="nav-button" data-view="view2floors">View 2 Floors</button>
-            <button class="nav-button" data-view="view3floors">View 3 Floors</button>
+            <button class="nav-button floors-btn active" onclick="changeImgSrc(event, 'FloorsImage', 'images/p8 Floor 1.jpg', 'floors-btn')">First Floor</button>
+            <button class="nav-button floors-btn" onclick="changeImgSrc(event, 'FloorsImage', 'images/p9 Floor 2.jpg', 'floors-btn')">Second Floor</button>
+            <button class="nav-button floors-btn" onclick="changeImgSrc(event, 'FloorsImage', 'images/p10 Floor 3.jpg', 'floors-btn')">Third Floor</button>
           <div class="nav-buttons-floors"></div>
         </div>
       </div>
 
       <!-- Analyses tab -->
       <div id="AnalysesTab" class="tabcontent">
-        placeholder
+        <!-- placeholder -->
+        <img src="images/p11 Analysis Loads.jpg" class="image" id="AnalysesImage" />
+        <!-- <div class="banner">Analyses</div> -->
         <div class="nav-buttons">
           <div class="nav-buttons-analysis"></div>
-            <button class="nav-button" data-view="view3analysis">View 1 Analysis</button>
-            <button class="nav-button" data-view="view2analysis">View 2 Analysis</button>
-            <button class="nav-button" data-view="view3analysis">View 3 Analysis</button>
-            <button class="nav-button" data-view="view4analysis">View 4 Analysis</button>
+            <button class="nav-button analysis-btn active" onclick="changeImgSrc(event, 'AnalysesImage', 'images/p11 Analysis Loads.jpg', 'analysis-btn')">Loads</button>
+            <button class="nav-button analysis-btn" onclick="changeImgSrc(event, 'AnalysesImage', 'images/p12 Analysis Beams.jpg', 'analysis-btn')">Beams</button>
+            <button class="nav-button analysis-btn" onclick="changeImgSrc(event, 'AnalysesImage', 'images/p13 Analysis Shells.jpg', 'analysis-btn')">Shells</button>
           <div class="nav-buttons-analysis"></div>
         </div>
       </div>
@@ -60,14 +67,14 @@
         
       <!-- Schedules tab -->
       <div id="SchedulesTab" class="tabcontent">
-        Schedules?
+        <!-- Schedules? -->
+        <img src="images/p14 Schedules Costs and Quantity.jpg" class="image" id="SchedulesImage" />
+        <!-- <div class="banner">Schedules</div> -->
         <div class="nav-buttons">
           <div class="nav-buttons-schedules"></div>
-            <button class="nav-button" data-view="view1schedules">View 1 Schedules</button>
-            <button class="nav-button" data-view="view2schedules">View 2 Schedules</button>
-            <button class="nav-button" data-view="view3schedules">View 3 Schedules</button>
-            <button class="nav-button" data-view="view4schedules">View 4 Schedules</button>
-          <div class="nav-buttons-schedules"></div>
+          <button class="nav-button schedules-btn active" onclick="changeImgSrc(event, 'SchedulesImage', 'images/p14 Schedules Costs and Quantity.jpg', 'schedules-btn')">Costs and Quantiies</button>
+          <button class="nav-button schedules-btn" onclick="changeImgSrc(event, 'SchedulesImage', 'images/p15 Schedules Clash Detection.jpg', 'schedules-btn')">Clash Detection</button>
+        <div class="nav-buttons-schedules"></div>
         </div>
       </div>
 

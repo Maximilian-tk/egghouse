@@ -17,3 +17,15 @@ function showTab(event, name) {
     // Make tab button active
     event.currentTarget.className += " active";
 }
+
+function changeImgSrc(event, id, path, buttonClass) {
+    document.getElementById(id).src = path;
+
+    // Make all side buttons inactive
+    buttons = document.getElementsByClassName(buttonClass);
+    for (i = 0; i < buttons.length; i++) {
+        buttons[i].className = buttons[i].className.replace(" active", "");
+    }
+    // Make tab button active
+    event.currentTarget.className += " active";
+}
