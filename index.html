@@ -83,7 +83,13 @@
 
       <!-- ABOUT TAB -->
       <div id="AboutTab" class="tabcontent">
-        <iframe id="htmliframe" src="//jsfiddle.net/Snoboi/o1z5gps0/4/embedded/html,css,js/dark/" width="100%" height="100%" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+        <iframe id="htmliframe" src="//jsfiddle.net/Snoboi/o1z5gps0/4/embedded/html/dark/" width="100%" height="100%" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+        <div class="nav-buttons">
+          <div class="nav-buttons-about"></div>
+          <button class="nav-button about-btn active" onclick="changeIframeSrc(event, 'htmliframe', '\/\/jsfiddle.net/Snoboi/o1z5gps0/4/embedded/html/dark', 'about-btn')">.html</button>
+          <button class="nav-button about-btn" onclick="changeIframeSrc(event, 'htmliframe', '\/\/jsfiddle.net/Snoboi/o1z5gps0/4/embedded/css/dark', 'about-btn')">.css</button>
+          <button class="nav-button about-btn" onclick="changeIframeSrc(event, 'htmliframe', '\/\/jsfiddle.net/Snoboi/o1z5gps0/4/embedded/js/dark', 'about-btn')">.js</button>
+          <div class="nav-buttons-about"></div>
       </div>
     <!--================MAIN RIGHT CONTAINER================-->
     </div>
