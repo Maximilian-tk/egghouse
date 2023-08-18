@@ -4,41 +4,45 @@
   <title>Your Web Page Title</title>
   <link rel="stylesheet" href="styles.css">
   <script src="navigation.js"></script>
-  <script src="imageDisplay.js"></script>
 </head>
 
 <body>
   <div class="main-container">
 
+    <!--================MAIN LEFT CONTAINER================-->
+    <!-- MAIN LEFT CONTAINER -->
     <div class="left-container">
       <div class="left-banner">Egghouse</div>
       <div class="buttons">
         <!-- Left container buttons -->
         <button class="left-button" onclick="showTab(event, 'WelcomeTab')" id="defaultTab" data-views="welcome">Welcome</button>
-        <button class="left-button" onclick="showTab(event, 'ModelTab')" data-views="view1floors view2floors view3floors view4floors" data-background="#FF5733">Model</button>   
-        <button class="left-button" onclick="showTab(event, 'FloorsTab')" data-views="view1floors view2floors view3floors view4floors" data-background="#FF5733">Floors</button>
-        <button class="left-button" onclick="showTab(event, 'AnalysesTab')" data-views="view1analysis view2analysis view3analysis view4analysis" data-background="#33FF57">Analyses</button>
-        <button class="left-button" onclick="showTab(event, 'SchedulesTab')" data-views="view1schedules view2schedules view3schedules view4schedules" data-background="#5733FF">Schedules</button>
+        <button class="left-button" onclick="showTab(event, 'ModelTab')" data-views="view1floors view2floors view3floors view4floors" >Model</button>   
+        <button class="left-button" onclick="showTab(event, 'FloorsTab')" data-views="view1floors view2floors view3floors view4floors" >Floors</button>
+        <button class="left-button" onclick="showTab(event, 'AnalysesTab')" data-views="view1analysis view2analysis view3analysis view4analysis" >Analyses</button>
+        <button class="left-button" onclick="showTab(event, 'SchedulesTab')" data-views="view1schedules view2schedules view3schedules view4schedules" >Schedules</button>
+        <button class="left-button" onclick="showTab(event, 'AboutTab')" data-views="view1about view2about view3about view4about" >About web scripts</button>
       </div>
     </div>
+    <!--================MAIN LEFT CONTAINER================-->
 
+    <!--================MAIN RIGHT CONTAINER================-->
     <div class="right-container">
     
-      <!-- Welcome tab -->
+      <!-- WELCOME TAB -->
       <div id="WelcomeTab" class="tabcontent">
         <img src="images/p1 Welcome Cover.jpg" class="coverimage"/>
       </div>
 
-      <!-- Model tab -->
+      <!-- MODEL TAB -->
       <div id="ModelTab" class="tabcontent">
         <iframe id="sdv-iframe" width="100%" height="100%" src="https://www.shapediver.com/app/iframe/egg-structure-6-reduced-5?primaryColor=%23317DD4&secondaryColor=%23393A45&surfaceColor=%23FFFFFF&backgroundColor=%23F8F8F8&showControls=1&showZoomButton=1&showFullscreenButton=1&logo=" referrerpolicy="origin" allowfullscreen style="overflow-x: hidden; overflow-y: hidden; border-width: 0;">
           <p>Your browser does not support iframes.</p>
         </iframe>
       </div>
 
-      <!-- Floors tab -->
+      <!-- FLOORS TAB -->
       <div id="FloorsTab" class="tabcontent">
-        <!-- Some text lol -->
+        <!-- first iamge to load -->
         <img src="images/p8 Floor 1.jpg" class="image" id="FloorsImage" />
         <!-- <div class="banner">Floors</div> -->
         <div class="nav-buttons">
@@ -50,9 +54,9 @@
         </div>
       </div>
 
-      <!-- Analyses tab -->
+      <!-- ANALYSIS TAB -->
       <div id="AnalysesTab" class="tabcontent">
-        <!-- placeholder -->
+        <!-- first image to load -->
         <img src="images/p11 Analysis Loads.jpg" class="image" id="AnalysesImage" />
         <!-- <div class="banner">Analyses</div> -->
         <div class="nav-buttons">
@@ -63,11 +67,10 @@
           <div class="nav-buttons-analysis"></div>
         </div>
       </div>
-      <!-- <div id="WelcomeViews" class=" -->
-        
-      <!-- Schedules tab -->
+      
+      <!-- SCHEDULES TAB -->
       <div id="SchedulesTab" class="tabcontent">
-        <!-- Schedules? -->
+        <!-- first image to load -->
         <img src="images/p14 Schedules Costs and Quantity.jpg" class="image" id="SchedulesImage" />
         <!-- <div class="banner">Schedules</div> -->
         <div class="nav-buttons">
@@ -78,6 +81,19 @@
         </div>
       </div>
 
+      <!-- ABOUT TAB -->
+      <div id="AboutTab" class="tabcontent">
+        <img src="images/p14 Schedules Costs and Quantity.jpg" class="image" id="AboutImage" />
+        <!-- <div class="banner">About</div> -->
+        <div class="nav-buttons">
+          <div class="nav-buttons-about"></div>
+          <button class="nav-button about-btn active" onclick="changeImgSrc(event, 'AboutImage', 'images/p14 Schedules Costs and Quantity.jpg', 'about-btn')">.html</button>
+          <button class="nav-button about-btn" onclick="changeImgSrc(event, 'AboutImage', 'images/p15 Schedules Clash Detection.jpg', 'about-btn')">.css</button>
+          <button class="nav-button about-btn" onclick="changeImgSrc(event, 'AboutImage', 'images/p15 Schedules Clash Detection.jpg', 'about-btn')">.js</button>
+        <div class="nav-buttons-about"></div>
+        </div>
+      </div>
+    <!--================MAIN RIGHT CONTAINER================-->
     </div>
   </div>
 
